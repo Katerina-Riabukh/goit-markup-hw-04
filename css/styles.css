@@ -3,6 +3,7 @@
     --bgc-dark: #2E2F42;
     --bgc-light: #F4F4FD;
     --bgc-image: #E7E9FC;
+    --bgc-70-grey: rgba(46, 47, 66, 0.7);
     /* text color */
     --hero-text-color: #ffffff;
     --accent-color: #4D5AE5;
@@ -11,7 +12,7 @@
     --p-txt-secondary: #E7E9FC;
     --primary-text-color: #2E2F42;
     --secondary-text-color: #434455;
-
+    --white-text-color: #FFFFFF;
     /* font family */
     --primery-font: 'Roboto', sans-serif;
     --secondary-font: 'Raleway', sans-serif;
@@ -110,17 +111,9 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 
-    /* outline: 2px solid red; */
+    outline: 2px solid red;
 }
 
-/* .pad-top {
-    padding-top: 0px;
-}
-
-.pad-top-btm {
-    padding-top: 0px;
-    padding-bottom: 0px;
-} */
 
 .image {
     display: block;
@@ -130,6 +123,10 @@ body {
 
 .border-section {
     border-bottom: 1px solid #E7E9FC;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
+    ;
 }
 
 /**
@@ -208,6 +205,16 @@ body {
 */
 .hero {
     background-color: #2E2F42;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../BG-image/people-office\ 1\(pre\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 188px;
     padding-bottom: 188px;
     text-align: center;
@@ -296,6 +303,18 @@ body {
 
 /**
   |============================
+  | Customers section
+  |============================
+*/
+.customers-list {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+/**
+  |============================
   | Team section
   |============================
 */
@@ -364,11 +383,23 @@ body {
     color: var(--accent-color);
 }
 
+.soc-media-title {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--white-text-color);
+    line-height: calc(24 / 16);
+    letter-spacing: 0.02em;
+}
+
 /**
   |============================
   | Portfolio page
   |============================
 */
+.choice-section {
+    padding-top: 96px;
+}
+
 /* Battons */
 .button-nav {
     font-family: var(--primery-font);
@@ -397,12 +428,15 @@ body {
 .button-nav:focus {
     background-color: var(--accent-color);
     color: var(--button-text-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 2px 1px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    ;
 }
 
 .choice-button {
     display: flex;
     justify-content: center;
-    margin-top: 96px;
     margin-bottom: 72px;
 }
 
@@ -434,4 +468,6 @@ body {
     padding-left: 16px;
 
     background-color: #ffffff;
+
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
