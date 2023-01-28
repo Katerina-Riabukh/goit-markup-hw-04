@@ -4,6 +4,7 @@
     --bgc-light: #F4F4FD;
     --bgc-image: #E7E9FC;
     --bgc-70-grey: rgba(46, 47, 66, 0.7);
+    --bgc-icon-footer: #31D0AA;
     /* text color */
     --hero-text-color: #ffffff;
     --accent-color: #4D5AE5;
@@ -111,7 +112,7 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 
-    outline: 2px solid red;
+    /* outline: 2px solid red; */
 }
 
 
@@ -277,6 +278,18 @@ body {
     flex-basis: calc((100% - 72px) /4);
 }
 
+.feature-svg {
+    width: 100%;
+    display: flex;
+    background-color: var(--bgc-light);
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    padding: 24px 100px;
+    margin-bottom: 8px;
+
+}
+
 /**
   |============================
   | Doing Section
@@ -306,12 +319,46 @@ body {
   | Customers section
   |============================
 */
-.customers-list {
-
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
+.customer-section {
+    padding-top: 130px;
 }
+
+.customers-list {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+
+}
+
+.customer-item {
+    width: 168px;
+    height: 88px;
+
+}
+
+.customer-link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 16px 32px;
+    border: 1px solid #8E8F99;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    color: rgba(142, 143, 153, 1);
+}
+
+.customer-icon {
+    fill: currentColor;
+}
+
+.customer-link:hover,
+.customer-link:focus {
+    color: var(--button-click-color);
+    border-color: var(--button-click-color);
+}
+
+
 
 /**
   |============================
@@ -342,6 +389,43 @@ body {
     padding-bottom: 32px;
 }
 
+.team-card-descr {
+    margin-bottom: 8px;
+}
+
+.soc-media-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.soc-media-item {
+    display: flex;
+    padding: 12px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+}
+
+.soc-media-link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+}
+
+.soc-media-icon {
+    fill: currentColor;
+}
+
+.soc-media-item:hover {
+    background-color: #404BBF;
+
+}
+
 /**
   |============================
   | Footer
@@ -349,6 +433,7 @@ body {
 */
 
 .footer {
+    display: flex;
     background-color: #2E2F42;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -389,6 +474,33 @@ body {
     color: var(--white-text-color);
     line-height: calc(24 / 16);
     letter-spacing: 0.02em;
+    margin-top: 0px;
+    margin-bottom: 16px;
+    margin-left: 0px;
+}
+
+.soc-media-foot-list {
+    gap: 16px;
+}
+
+.soc-media-foot-item {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.soc-media-foot-item:hover {
+    background-color: var(--bgc-icon-footer);
+}
+
+
+.bgc-foot-icons {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.soc-media-foot-list {
+    display: flex;
+    width: 208px;
 }
 
 /**
@@ -470,4 +582,15 @@ body {
     background-color: #ffffff;
 
     box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.choice-link {
+    display: block;
+}
+
+.choice-link:hover,
+.choice-link:focus {
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+        0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+        0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
