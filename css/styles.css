@@ -3,17 +3,18 @@
     --bgc-dark: #2E2F42;
     --bgc-light: #F4F4FD;
     --bgc-image: #E7E9FC;
+    --bgc-white: #FFFFFF;
+    --bgc-10-gray: rgba(255, 255, 255, 0.1);
     --bgc-70-grey: rgba(46, 47, 66, 0.7);
     --bgc-icon-footer: #31D0AA;
     /* text color */
-    --hero-text-color: #ffffff;
     --accent-color: #4D5AE5;
-    --button-text-color: #ffffff;
     --button-click-color: #404BBF;
     --p-txt-secondary: #E7E9FC;
     --primary-text-color: #2E2F42;
     --secondary-text-color: #434455;
     --white-text-color: #FFFFFF;
+    --logo-text-color: #F4F4FD;
     /* font family */
     --primery-font: 'Roboto', sans-serif;
     --secondary-font: 'Raleway', sans-serif;
@@ -40,7 +41,7 @@
   |============================
 */
 body {
-    background-color: #ffffff;
+    background-color: var(--bgc-white);
     font-family: var(--primery-font);
     font-size: 16px;
     color: var(--primary-text-color);
@@ -205,7 +206,7 @@ body {
   |============================
 */
 .hero {
-    background-color: #2E2F42;
+    background-color: var(--bgc-dark);
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../BG-image/people-office\ 1\(pre\).jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -231,7 +232,7 @@ body {
     font-weight: 700;
     font-size: 56px;
     line-height: calc(60 / 56);
-    color: var(--hero-text-color);
+    color: var(--white-text-color);
 
 }
 
@@ -250,7 +251,7 @@ body {
     border: none;
 
     background-color: var(--accent-color);
-    color: var(--button-text-color);
+    color: var(--white-text-color);
     cursor: pointer;
 }
 
@@ -264,7 +265,7 @@ body {
   |============================
 */
 .features-section {
-    background-color: #FFFFFF;
+    background-color: var(--bgc-white);
 }
 
 .features-list {
@@ -296,7 +297,7 @@ body {
   |============================
 */
 .doing-section {
-    background-color: #FFFFFF;
+    background-color: var(--bgc-white);
 }
 
 .pad-top {
@@ -365,7 +366,7 @@ body {
   |============================
 */
 .team-section {
-    background-color: #F4F4FD
+    background-color: var(--bgc-light);
 }
 
 .team-list {
@@ -377,7 +378,7 @@ body {
 .team-card {
     width: 264px;
     text-align: center;
-    background: #FFFFFF;
+    background: var(--bgc-white);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
     flex-basis: calc((100% - 72px) /4);
@@ -415,17 +416,12 @@ body {
     border-radius: 50%;
     align-items: center;
     justify-content: center;
-    color: #FFFFFF;
+    color: var(--white-text-color);
 }
 
 .soc-media-icon {
     fill: currentColor;
 }
-
-/* .soc-media-item:hover,
-.soc-media-item:focus {
-    background-color: #404BBF;
-} */
 
 .soc-media-link:hover,
 .soc-media-link:focus {
@@ -440,14 +436,20 @@ body {
 
 .footer {
     display: flex;
-    background-color: #2E2F42;
+    background-color: var(--bgc-dark);
     padding-top: 100px;
     padding-bottom: 100px;
 }
 
+.foot-container {
+    display: flex;
+}
+
+
 .logo-descript {
     display: flex;
     width: 264px;
+    margin-right: 120px;
 }
 
 .logo-foot {
@@ -463,11 +465,11 @@ body {
 }
 
 .text-foot {
-    color: #E7E9FC
+    color: var(--p-txt-secondary);
 }
 
 .logo-foot.link {
-    color: #F4F4FD
+    color: var(--logo-text-color)
 }
 
 .logo-foot.link:hover,
@@ -497,7 +499,7 @@ body {
     border-radius: 50%;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--bgc-10-gray);
 }
 
 
@@ -509,17 +511,12 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 50px;
-    color: #FFFFFF;
+    color: var(--white-text-color);
 }
 
 .soc-media-foot-link:hover,
 .soc-media-foot-link:focus {
     background-color: var(--bgc-icon-footer);
-}
-
-
-.bgc-foot-icons {
-    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .soc-media-foot-list {
@@ -562,7 +559,8 @@ body {
 
 .button-nav:hover,
 .button-nav:focus {
-    background-color: var(--accent-color);
+    background-color: var(--button-click-color);
+    border: var(--button-click-color);
     color: var(--button-text-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
         0px 2px 1px rgba(0, 0, 0, 0.08),
@@ -586,7 +584,9 @@ body {
     width: 360px;
     margin-right: 24px;
     margin-bottom: 48px;
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
+
 
 .choice-card:nth-child(3n) {
     margin-right: 0px;
@@ -603,9 +603,7 @@ body {
     padding-bottom: 32px;
     padding-left: 16px;
 
-    background-color: #ffffff;
-
-    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    background-color: var(--bgc-white);
 }
 
 .choice-link {
